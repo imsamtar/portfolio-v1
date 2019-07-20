@@ -9,8 +9,6 @@
 
 		position: relative;
 		min-height: 100vh;
-		padding: 2em;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>

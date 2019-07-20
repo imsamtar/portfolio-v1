@@ -2,6 +2,8 @@
     nav {
         display: grid;
         grid-template-columns: max-content auto max-content;
+        height: 4rem;
+        place-items: center;
     }
     .logo {
         display: grid;
