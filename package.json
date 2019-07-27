@@ -5,7 +5,8 @@
   "repository": {
     "type" : "git",
     "url" : "https://github.com/imsamtar/portfolio.git"
-  },  
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
