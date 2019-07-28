@@ -6,7 +6,6 @@
 
 <style>
 	main {
-
 		position: relative;
 		min-height: 100vh;
 		box-sizing: border-box;
