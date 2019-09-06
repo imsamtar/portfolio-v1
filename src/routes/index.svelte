@@ -1,20 +1,46 @@
-<script>
-    import Hero from '../components/Hero.svelte';
-</script>
+<style>
+	h1, figure, p {
+		text-align: center;
+		margin: 0 auto;
+	}
 
-<Hero />
-<div id="projects" class="bg-pink-500 text-white h-screen">
-    Projects
-</div>
+	h1 {
+		font-size: 2.8em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
+	}
 
-<div id="skills" class="bg-yellow-500 text-white h-screen">
-    Skills
-</div>
+	figure {
+		margin: 0 0 1em 0;
+	}
 
-<div id="contact" class="bg-green-500 text-white h-screen">
-    Contact
-</div>
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 0 1em 0;
+	}
 
-<footer class="bg-gray-500 text-white h-screen">
-    Footer
-</footer>
+	p {
+		margin: 1em auto;
+	}
+
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
+	}
+</style>
+
+<svelte:head>
+	<title>Sapper project template</title>
+</svelte:head>
+
+<h1>Great success!</h1>
+
+<figure>
+	<img alt='Borat' src='great-success.png'>
+	<figcaption>HIGH FIVE!</figcaption>
+</figure>
+
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>

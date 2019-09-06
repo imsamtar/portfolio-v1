@@ -7,12 +7,16 @@
 <style>
 	main {
 		position: relative;
-		min-height: 100vh;
+		max-width: 56em;
+		background-color: white;
+		padding: 2em;
+		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>
 
-<Nav segment/>
+<Nav {segment}/>
+
 <main>
 	<slot></slot>
 </main>

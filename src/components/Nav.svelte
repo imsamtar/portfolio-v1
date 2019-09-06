@@ -1,32 +1,60 @@
 <script>
-    import Notification from '../components/Notification.svelte';
-    let online = true;
-    let scrollY = 0;
-    let prevScroll = scrollY;
-    let showNavbar = true;
-    $: showNotification = !online;
-    $: showNavbar = scrollY>prevScroll?false:true,prevScroll = scrollY;
-
+	export let segment;
 </script>
 
 <style>
-    nav {
-        transition: 1s top;
-    }
+	nav {
+		border-bottom: 1px solid rgba(255,62,0,0.1);
+		font-weight: 300;
+		padding: 0 1em;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* clearfix */
+	ul::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	li {
+		display: block;
+		float: left;
+	}
+
+	.selected {
+		position: relative;
+		display: inline-block;
+	}
+
+	.selected::after {
+		position: absolute;
+		content: '';
+		width: calc(100% - 1em);
+		height: 2px;
+		background-color: rgb(255,62,0);
+		display: block;
+		bottom: -1px;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 1em 0.5em;
+		display: block;
+	}
 </style>
 
-<svelte:window bind:online={online} bind:scrollY={scrollY}/>
+<nav>
+	<ul>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
+		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
 
-{#if showNotification}
-    <Notification bind:condition={showNotification} color='white' bg='red-500' title='Offline'/>
-{/if}
-
-<nav class="bg-black z-10 sticky top-0 h-24" style="top:{showNavbar?'0':'-5.7rem'};">
-    <ul class="sm:flex justify-around h-24">
-        <li class="flex w-full p-3 sm:p-0"><a class="text-center w-full text-white sm:p-8 font-bold text-lg cursor-pointer hover:bg-white hover:text-black" href="/#">Home</a></li>
-        <li class="flex w-full p-3 sm:p-0"><a class="text-center w-full text-white sm:p-8 font-bold text-lg cursor-pointer hover:bg-white hover:text-black" href="#projects">Projects</a></li>
-        <li class="flex w-full p-3 sm:p-0"><a class="text-center w-full text-white sm:p-8 font-bold text-lg cursor-pointer hover:bg-white hover:text-black" href="#skills">Skills</a></li>
-        <li class="flex w-full p-3 sm:p-0"><a class="text-center w-full text-white sm:p-8 font-bold text-lg cursor-pointer hover:bg-white hover:text-black" href="#contact">Contact</a></li>
-    </ul>
-    <!-- <div class="bg-black text-white">{scrollY} {showNavbar}</div> -->
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
+	</ul>
 </nav>

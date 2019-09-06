@@ -1,8 +1,8 @@
 {
-	"background_color": "#eeeeee",
-	"theme_color": "#010101",
-	"name": "portfolio",
-	"short_name": "portfolio",
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "TODO",
+	"short_name": "TODO",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
