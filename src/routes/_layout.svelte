@@ -10,8 +10,9 @@
 		max-width: 56em;
 		background-color: white;
 		padding: 2em;
-		margin: 0 auto;
+		margin: 1rem auto;
 		box-sizing: border-box;
+		min-height: 85vh;
 	}
 </style>
 

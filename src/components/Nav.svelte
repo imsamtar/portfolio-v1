@@ -4,57 +4,46 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
+		height: 3rem;
+		color: white;
+		background: #00000088;
+		display: flex;
 	}
-
-	ul {
-		margin: 0;
+	.logo {
+		margin-left: 5rem;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+	.menu {
+		margin: 0 5rem 0 auto;
+		list-style: none;
+		display: flex;
 		padding: 0;
 	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
+	.menu > li {
+		width: 100%;
+		display: flex;
+		align-items: stretch;
+		justify-content: space-evenly;
+		margin: 0 0.1rem;
 	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
-
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
+	.menu > li:hover { background: #00000077;}
+	.menu > li > a {
+		padding: 0.7rem;
 		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
 	}
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
+	<a class="logo" href="/">
+		<i class="fa fa-code"></i>
+	</a>
+	<ul class="menu">
+		<li><a href="/">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#project">Projects</a></li>
+		<li><a href="#blog">Blog</a></li>
 	</ul>
 </nav>
