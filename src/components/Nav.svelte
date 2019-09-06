@@ -28,7 +28,7 @@
 		justify-content: space-evenly;
 		margin: 0 0.1rem;
 	}
-	.menu > li:hover { background: #00000077;}
+	.menu > li:hover, .active { background: #00000077;}
 	.menu > li > a {
 		padding: 0.7rem;
 		text-decoration: none;
@@ -40,10 +40,10 @@
 		<i class="fa fa-code"></i>
 	</a>
 	<ul class="menu">
-		<li><a href="/">Home</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li><a href="#project">Projects</a></li>
-		<li><a href="#blog">Blog</a></li>
+		<li><a class:active={segment==undefined} href="/">Home</a></li>
+		<li><a class:active={segment=='about'} href="/about">About</a></li>
+		<li><a class:active={segment=='contact'} href="/contact">Contact</a></li>
+		<li><a class:active={segment=='projects'} href="/projects">Projects</a></li>
+		<li><a class:active={segment=='blog'} href="/blog">Blog</a></li>
 	</ul>
 </nav>
