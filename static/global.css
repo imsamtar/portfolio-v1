@@ -23,11 +23,12 @@ html, body {
 	line-height: 1.5;
 	color: white;
 	background: var(--primary);
-	min-height: 100vh;
+	min-height: 100.08vh;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
+	display: block;
 }
 
 ::-webkit-scrollbar-track-piece  {

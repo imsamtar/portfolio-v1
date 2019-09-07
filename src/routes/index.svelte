@@ -1,7 +1,8 @@
 <script>
 	import Intro from '../components/Intro.svelte';
-	import About from '../components/About.svelte';
-	import Contact from '../components/Contact.svelte';
+	import About from './about.svelte';
+	import Projects from './projects.svelte';
+	import Contact from './contact.svelte';
 	import Footer from '../components/Footer.svelte';
 </script>
 
@@ -10,6 +11,7 @@
 </svelte:head>
 
 <Intro />
+<Projects />
 <About />
 <Contact />
 <Footer />

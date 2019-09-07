@@ -2,7 +2,8 @@
 	section {
 		flex: 1;
 		color: white;
-		background: orange;
+		background: url(../intro-background.jpg) no-repeat;
+		background-size: cover;
 		height: calc(100vh - 3rem);
 		font-family: 'Comfortaa';
 		display: flex;

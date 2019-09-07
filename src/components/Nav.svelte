@@ -4,9 +4,12 @@
 
 <style>
 	nav {
+		z-index: 10;
+		position: sticky;
+		top: 0rem;
 		height: 3rem;
 		color: white;
-		background: #00000088;
+		background: #000000cc;
 		display: flex;
 	}
 	.logo {
