@@ -7,17 +7,26 @@
 <style>
 	main {
 		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 1rem auto;
+		background-color: #00000022;
+		padding: 0.5rem;
+		margin: 1rem 3rem;
 		box-sizing: border-box;
-		min-height: 85vh;
+		min-height: calc(100vh - 7rem);
+		display: flex;
+	}
+	main > section {
+		flex: 1;
+		background: #ffffff22;
+		border-radius: 0.5rem;
+		padding: 1rem;
+		color: white;
 	}
 </style>
 
 <Nav {segment}/>
 
 <main>
-	<slot></slot>
+	<section>
+		<slot></slot>
+	</section>
 </main>
